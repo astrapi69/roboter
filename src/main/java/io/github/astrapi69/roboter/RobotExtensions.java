@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (C) 2015 Asterios Raptis
+ * Copyright (C) 2022 Asterios Raptis
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
@@ -24,14 +24,14 @@
  */
 package io.github.astrapi69.roboter;
 
-import io.github.astrapi69.random.SecureRandomFactory;
-import io.github.astrapi69.random.object.RandomObjectFactory;
-
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.Field;
 import java.security.SecureRandom;
+
+import io.github.astrapi69.random.SecureRandomFactory;
+import io.github.astrapi69.random.object.RandomObjectFactory;
 
 /**
  * The class {@link RobotExtensions} provides utility methods for the class {@link Robot}
