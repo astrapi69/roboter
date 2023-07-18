@@ -375,6 +375,7 @@ public class RobotExtensions
 	 * will be taken
 	 *
 	 * @param threadPriority
+	 *            the thread priority to set
 	 */
 	public static void setCurrentThreadPriority(int threadPriority)
 	{
