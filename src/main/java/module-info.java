@@ -22,39 +22,10 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.roboter;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import java.awt.HeadlessException;
-import java.awt.Point;
-
-import org.junit.jupiter.api.Test;
-
-/**
- * The unit test class for the class {@link MouseExtensions}
- */
-public class MouseExtensionsTest
+module roboter.main
 {
+	requires java.desktop;
+	requires randomizer.main;
 
-	/**
-	 * Test method for {@link MouseExtensions#getMousePosition()}
-	 */
-	@Test
-	public void testGetMousePosition()
-	{
-		try
-		{
-			Point currentMousePosition;
-
-			currentMousePosition = MouseExtensions.getMousePosition();
-			assertNotNull(currentMousePosition);
-		}
-		catch (HeadlessException e)
-		{
-			java.util.logging.Logger logger = java.util.logging.Logger
-				.getLogger(this.getClass().getName());
-			logger.info("Ignoring Headless exception.");
-		}
-	}
+	exports io.github.astrapi69.roboter;
 }
