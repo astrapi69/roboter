@@ -4,6 +4,9 @@
 Version 2.1-SNAPSHOT
 -------------
 
+ADDED:
+
+- new libs.versions.toml file for new automatic catalog versions update
 
 
 Version 2
