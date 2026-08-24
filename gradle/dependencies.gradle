@@ -1,12 +1,13 @@
-
 dependencies {
-    compileOnly("org.projectlombok:lombok:$lombokVersion")
-    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
-    implementation("io.github.astrapi69:randomizer:$randomizerVersion")
-    testCompileOnly("org.projectlombok:lombok:$lombokVersion")
-    testAnnotationProcessor("org.projectlombok:lombok:$lombokVersion")
-    testImplementation("com.github.meanbeanlib:meanbean:$meanbeanVersion")
-    testImplementation("io.github.astrapi69:junit-jupiter-extensions:$junitJupiterExtensionsVersion")
-    testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    // Note: use of bundles...
+    annotationProcessor libs.bundles.annotation.processor
+    compileOnly libs.bundles.compile.only
+
+    implementation libs.bundles.core.dependencies
+
+    testAnnotationProcessor libs.bundles.test.annotation.processor
+    testCompileOnly libs.bundles.test.compile.only
+
+    testImplementation libs.bundles.unit.testing
+    testRuntimeOnly libs.bundles.test.runtime.only
 }
