@@ -1,8 +1,11 @@
 ## Change log
 ----------------------
 
-Version 2.2 (unreleased)
+Version 3 (unreleased)
 -------------
+
+**roboter 3 requires JDK 25 or newer, at build and at runtime.** Its classes are compiled for JDK 25 (class
+file major 69) and do not load on an older JVM; stay on 2.1 for JDK 17 (#13).
 
 CHANGED:
 
