@@ -1,7 +1,7 @@
 ## Change log
 ----------------------
 
-Version 3 (unreleased)
+Version 3
 -------------
 
 **roboter 3 requires JDK 25 or newer, at build and at runtime.** Its classes are compiled for JDK 25 (class
@@ -22,6 +22,8 @@ CHANGED:
   release waiting for the maintainer (USER_MANAGED), the signing subkey through GPG_KEY_ID, signing that
   follows the key so a snapshot run rehearses the signature, a refused upload when only half of the key is
   set, and uploads only from CI, a release only from its RELEASE-* tag
+- the README names the family's funding channels, GitHub Sponsors, Liberapay, Ko-fi and PayPal, and no
+  cryptocurrency address any more (#15); its dead badges and links are replaced (#17)
 
 Version 2.1
 -------------
