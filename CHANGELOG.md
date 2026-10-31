@@ -1,6 +1,42 @@
 ## Change log
 ----------------------
 
+Version 3
+-------------
+
+**roboter 3 requires JDK 25 or newer, at build and at runtime.** Its classes are compiled for JDK 25 (class
+file major 69) and do not load on an older JVM; stay on 2.1 for JDK 17 (#13).
+
+CHANGED:
+
+- the source of 2.1 is on GitHub (#7): the three commits it was built from had never been pushed, and
+  five of its build files (gradle/apply-gradle-files.gradle, gradle-files.list, libs.versions.toml,
+  tagging.gradle, version-catalog-update.gradle) had never been committed, because .gitignore hid
+  /gradle. They are merged into develop as they were built
+- a pre-commit hook refuses a commit whose files Spotless would format (#1)
+- CI submits the Gradle dependency graph to GitHub (#3)
+- .gitignore no longer hides /gradle (#5)
+- randomizer 10.7, from 10.1, whose default generator was seeded with the current time
+  (GHSA-395w-fmf5-xfj3, #9)
+- publishing as in the rest of the family (#11): the Central Portal through the nmcp settings plugin, a
+  release waiting for the maintainer (USER_MANAGED), the signing subkey through GPG_KEY_ID, signing that
+  follows the key so a snapshot run rehearses the signature, a refused upload when only half of the key is
+  set, and uploads only from CI, a release only from its RELEASE-* tag
+- the README names the family's funding channels, GitHub Sponsors, Liberapay, Ko-fi and PayPal, and no
+  cryptocurrency address any more (#15); its dead badges and links are replaced (#17)
+
+Version 2.1
+-------------
+
+Released to Maven Central on 2026-08-24, built with Gradle 9.7.0 for JDK 17 (roboter-2.1.module).
+
+CHANGED:
+
+- built from a Gradle version catalog with bundles, and published through the Central Portal
+- Gradle 9.7.0
+- randomizer 10.1 at runtime (roboter-2.1.pom). randomizer before 10.5 seeds its default generator
+  with the current time (GHSA-395w-fmf5-xfj3); raising it is planned for the next release
+
 Version 2
 -------------
 
