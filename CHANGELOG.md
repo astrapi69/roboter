@@ -13,6 +13,8 @@ CHANGED:
 - a pre-commit hook refuses a commit whose files Spotless would format (#1)
 - CI submits the Gradle dependency graph to GitHub (#3)
 - .gitignore no longer hides /gradle (#5)
+- randomizer 10.7, from 10.1, whose default generator was seeded with the current time
+  (GHSA-395w-fmf5-xfj3, #9)
 
 Version 2.1
 -------------
