@@ -15,6 +15,10 @@ CHANGED:
 - .gitignore no longer hides /gradle (#5)
 - randomizer 10.7, from 10.1, whose default generator was seeded with the current time
   (GHSA-395w-fmf5-xfj3, #9)
+- publishing as in the rest of the family (#11): the Central Portal through the nmcp settings plugin, a
+  release waiting for the maintainer (USER_MANAGED), the signing subkey through GPG_KEY_ID, signing that
+  follows the key so a snapshot run rehearses the signature, a refused upload when only half of the key is
+  set, and uploads only from CI, a release only from its RELEASE-* tag
 
 Version 2.1
 -------------
